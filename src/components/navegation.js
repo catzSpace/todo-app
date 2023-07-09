@@ -1,10 +1,12 @@
 import React from "react";
-import { createDrawerNavigator, DrawerContentScrollView } from "@react-navigation/drawer";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "../screens/home";
 import Tasks from "../screens/tasks";
 import About from "../screens/about";
-import { Switch } from "react-native-gesture-handler";
-import { Text, StyleSheet } from "react-native";
+import {  StyleSheet } from "react-native";
+import Menu from "./menuComponents";
+
+
 
 
 const Drawer = createDrawerNavigator();
@@ -14,8 +16,12 @@ export function MyDrawer() {
 
         
             <Drawer.Navigator
-                drawerContent = { (props) => <Menu {...props} /> } //permite que el componente "Menu" reemplace
+            drawerContent = { (props) => <Menu {...props} /> } //permite que el componente "Menu" reemplace
                 //el contenido del drawer.Navigator por el contenido del mismo "Menu".
+                screenOptions={{
+                    drawerActiveBackgroundColor: "#FFF5D8",
+                    drawerActiveTintColor: "#FF9983"
+                }}
             >
                 
                 <Drawer.Screen name="Home" component={Home} />
@@ -27,14 +33,7 @@ export function MyDrawer() {
     );
 }
 
-const Menu = ({ nav }) =>{
-    return(
-        <DrawerContentScrollView style={style.contenedor}>
-            <Text style={style.texto}>Catz Space</Text>
-            <Switch/>
-        </DrawerContentScrollView>
-    )
-}
+
 
 const style = StyleSheet.create({
     contenedor: {
