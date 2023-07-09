@@ -8,3 +8,19 @@ _______
 
 
 <img src="https://github.com/catzSpace/todo-app/assets/133279982/32b1f163-eaef-46b9-bbd3-0bbd123a5ba4" />
+
+______
+
+se agregaron algunos estilos a los items del drawer, ademas, se agregó un titulo (hoy no fue un dia muy productivo).
+
+```lua
+screenOptions={{
+  drawerActiveBackgroundColor: "#FFF5D8",
+  drawerActiveTintColor: "#FF9983"
+}}
+```
+
+
+
+<img src="https://github.com/catzSpace/todo-app/assets/133279982/c34ff9de-e066-47e0-b58c-25233f7afe79" width="250em"/>
+
