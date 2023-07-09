@@ -24,3 +24,23 @@ screenOptions={{
 
 <img src="https://github.com/catzSpace/todo-app/assets/133279982/c34ff9de-e066-47e0-b58c-25233f7afe79" width="250em"/>
 
+_______
+# integracion de ScrollView
+
+<img src="https://github.com/catzSpace/todo-app/assets/133279982/5eeff6aa-7f35-4492-9104-8139128ea009"/>
+
+
+----
+```lua
+import { ScrollView } from "react-native-gesture-handler";
+
+export default function Page(){
+  return(
+    <ScrollView >
+      {// content of page}
+    <ScrollView />
+  )
+}
+
+```
+
