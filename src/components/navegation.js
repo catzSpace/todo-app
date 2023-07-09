@@ -17,14 +17,32 @@ export function MyDrawer() {
         
             <Drawer.Navigator
             drawerContent = { (props) => <Menu {...props} /> } //permite que el componente "Menu" reemplace
-                //el contenido del drawer.Navigator por el contenido del mismo "Menu".
+                                                                //el contenido del drawer.Navigator por el contenido del mismo "Menu".
                 screenOptions={{
                     drawerActiveBackgroundColor: "#FFF5D8",
-                    drawerActiveTintColor: "#FF9983"
+                    drawerActiveTintColor: "#FF9983",
+                    
                 }}
             >
+                <Drawer.Screen name="Home" component={Home} 
                 
-                <Drawer.Screen name="Home" component={Home} />
+                options={{
+                    title: "all notes",
+                    headerTitleAlign: "center",
+                    headerStyle: {
+                        borderRadius: 30,
+                    },
+                    headerLeftContainerStyle: {
+                        marginTop: 5,
+                        marginLeft: 18,
+                    },
+                    headerBackgroundContainerStyle: {
+                        marginTop: 55,
+                        width: 360,
+                        marginLeft: 18,
+                    },
+                }}
+                />
                 <Drawer.Screen name="Tasks" component={Tasks} />
                 <Drawer.Screen name="About" component={About} />
             </Drawer.Navigator>
@@ -41,6 +59,9 @@ const style = StyleSheet.create({
     },
     texto: {
         fontSize: 25
+    },
+    header: {
+        
     }
 })
 
