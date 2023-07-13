@@ -3,7 +3,6 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "../screens/home";
 import Tasks from "../screens/tasks";
 import About from "../screens/about";
-import {  StyleSheet } from "react-native";
 import Menu from "./menuComponents";
 
 
@@ -19,50 +18,43 @@ export function MyDrawer() {
             drawerContent = { (props) => <Menu {...props} /> } //permite que el componente "Menu" reemplace
                                                                 //el contenido del drawer.Navigator por el contenido del mismo "Menu".
                 screenOptions={{
-                    drawerActiveBackgroundColor: "#FFF5D8",
-                    drawerActiveTintColor: "#FF9983",
+                    drawerActiveBackgroundColor: "#A589CE",
+                    drawerActiveTintColor: "white",
+                    headerBackgroundContainerStyle:{
+                        backgroundColor: "#1F1D20",
+                    },
+                    headerTintColor: "white"
+
+                    
+                    
                     
                 }}
             >
                 <Drawer.Screen name="Home" component={Home} 
                 
-                options={{
-                    title: "all notes",
-                    headerTitleAlign: "center",
-                    headerStyle: {
-                        borderRadius: 30,
-                    },
-                    headerLeftContainerStyle: {
-                        marginTop: 5,
-                        marginLeft: 18,
-                    },
-                    headerBackgroundContainerStyle: {
-                        marginTop: 55,
-                        width: 360,
-                        marginLeft: 18,
-                    },
-                }}
+                    options={{
+                        title: "all notes",
+                        headerTitleAlign: "center",
+                    
+                    }}
                 />
-                <Drawer.Screen name="Tasks" component={Tasks} />
-                <Drawer.Screen name="About" component={About} />
+                <Drawer.Screen name="Tasks" component={Tasks} 
+                    options={{
+                        headerTitleAlign: "center",
+                    
+                    }}
+                />
+                <Drawer.Screen name="About" component={About}
+                    options={{
+                        headerTitleAlign: "center",
+                        
+                    }}
+                />
             </Drawer.Navigator>
 
         
     );
 }
 
-
-
-const style = StyleSheet.create({
-    contenedor: {
-        padding: 10
-    },
-    texto: {
-        fontSize: 25
-    },
-    header: {
-        
-    }
-})
 
 

@@ -32,5 +32,6 @@ const style = StyleSheet.create({
     texto:{
         paddingLeft: 15,
         fontSize: 25,
+        color: "white"
     }
 })

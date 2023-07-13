@@ -1,13 +1,17 @@
 import React from "react";
-import { Text, View } from "react-native";
+import {  Text, View } from "react-native";
 import { StyleSheet } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import AddBtn from "../components/addItem";
+
+
 
 
 const Home = () => {
     return(
         <View >
-            <ScrollView >
+            
+            <ScrollView style={style.scroll}>
                 <View style={style.containerNote}>
                     <Text style={style.notes}>primero nota hoooo yeah</Text>
                     <Text style={style.notes}>Home</Text>
@@ -18,7 +22,7 @@ const Home = () => {
                     <Text style={style.notes}>Home</Text>
                 </View>
             </ScrollView>
-
+            <AddBtn />
         </View>
     )
 }
@@ -26,20 +30,29 @@ const Home = () => {
 
 const style = StyleSheet.create({
     notes: {
-        backgroundColor: "white",
-        width: 320,
+        backgroundColor: "#312E33",
+        width: 370,
         height: 200,
-        marginBottom: 20,
+        marginBottom: 15,
         borderRadius: 20,
-        padding: 10
+        padding: 13,
+        fontSize: 18,
+        color: "white"
     },
     containerNote: {
-        flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 20
+
     },
+    texto:{
+        color: "white",
+        fontSize: 15
+    },
+    scroll:{
+        height: 640,
+    }
 })
+
 
 
 export default Home;
